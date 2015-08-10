@@ -1,0 +1,19 @@
+{
+  "name": "nodetunes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Capocaccia/nodetunes.git"
+  },
+  "author": "Carter Capocaccia <carter.capocaccia@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Capocaccia/nodetunes/issues"
+  },
+  "homepage": "https://github.com/Capocaccia/nodetunes#readme"
+}
