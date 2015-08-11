@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var ObjectID = require('mongodb').ObjectID;
 
 router.get('/', function (req, res) {
     var collection = global.db.collection('musicinfo');
@@ -13,5 +14,12 @@ router.get('/', function (req, res) {
     res.render('artistindex', {music: formattedMusic});
   });
 })
+
+router.post('/delete/:id', function(req, res){
+  var collection = global.db.collection('musicinfo');
+  collection.remove({_id: ObjectID(req.params.id)}, function(){
+    res.redirect('/aindex')
+  })
+});
 
 module.exports = router;
