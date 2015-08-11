@@ -23,11 +23,8 @@ app.post('/artist/create', function (req, res){
   });
 })
 
-app.get('/search/results', function (req, res) {
-  res.write('Hello World')
-  console.log(req.params)
-})
 
+//console logs the url parameter
 
 var port = process.env.PORT || 3000;
 
