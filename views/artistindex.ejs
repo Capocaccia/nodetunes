@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artist Index</title>
+</head>
+<body>
+  <h1>Artists</h1>
+  <a href="/newartists">New Artist</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% music.forEach(function (music) { %>
+        <tr>
+          <td><%= music.name %></td>
+          <td><%= music._id %></td>
+       </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
