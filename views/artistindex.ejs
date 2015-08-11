@@ -18,6 +18,9 @@
         <tr>
           <td><%= music.name %></td>
           <td><%= music._id %></td>
+          <form action='/aindex/delete/<%=music._id %>' method="POST">
+            <input type='submit' value="Delete">
+          </form>
        </tr>
       <% }); %>
     </tbody>
