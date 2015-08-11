@@ -16,10 +16,13 @@
     "url": "https://github.com/Capocaccia/nodetunes/issues"
   },
   "homepage": "https://github.com/Capocaccia/nodetunes#readme",
-   "dependencies": {
+  "dependencies": {
     "body-parser": "^1.13.3",
     "ejs": "^2.3.3",
     "express": "^4.13.3",
     "mongodb": "^2.0.40"
+  },
+  "devDependencies": {
+    "jquery": "^2.1.4"
   }
 }
