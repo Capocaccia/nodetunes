@@ -22,7 +22,5 @@
     "express": "^4.13.3",
     "mongodb": "^2.0.40"
   },
-  "devDependencies": {
-    "jquery": "^2.1.4"
-  }
+  "devDependencies": {}
 }

@@ -8,9 +8,7 @@ var aindex = require('./routes/artistindex');
 
 require('./lib/mongodb');
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.use('/', index);
 app.use('/newartists', newartist);
 app.use('/search', search);
@@ -23,8 +21,7 @@ app.post('/artist/create', function (req, res){
   });
 })
 
-
-//console logs the url parameter
+app.use(express.static('public'));
 
 var port = process.env.PORT || 3000;
 

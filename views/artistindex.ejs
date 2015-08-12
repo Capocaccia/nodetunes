@@ -17,10 +17,14 @@
       <% music.forEach(function (music) { %>
         <tr>
           <td><%= music.name %></td>
+          <td><%= music.genre %></td>
+          <td><%= music.wiki %></td>
           <td><%= music._id %></td>
+        <tr>
           <form action='/aindex/delete/<%=music._id %>' method="POST">
             <input type='submit' value="Delete">
           </form>
+        </tr>
        </tr>
       <% }); %>
     </tbody>
