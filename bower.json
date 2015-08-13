@@ -1,0 +1,20 @@
+{
+  "name": "nodetunes",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Capocaccia/nodetunes",
+  "authors": [
+    "Carter Capocaccia <carter.capocaccia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "~0.6.0",
+    "jquery": "~2.1.4"
+  }
+}
