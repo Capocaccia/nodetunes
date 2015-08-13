@@ -20,7 +20,6 @@ app.use('/', index);
 app.use('/newartists', newartist);
 app.use('/search', search);
 app.use('/aindex', aindex);
-app.use(express.static('public'));
 app.use(express.static('www'));
 
 var port = process.env.PORT || 3000;
