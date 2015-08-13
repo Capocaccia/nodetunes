@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-</head>
+<body>
+<%- include('head')%>
   <h1>Search for an artist</h1>
-  <form action="/search/results" method="GET">
+  <form action="get">
       <label for="name">Name</label>
       <input name="name" type="text" placeholder="name" class="form-control">
-      <button type="submit" value="Submit artist">Submit</button>
+      <button type="submit" value="Submit artist" class= "btn_search">Search</button>
   </form>
-<body>
+  </div class="resuls">
+  </div>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-<script type="text/javascript" src="public.js"></script>
+<%- include('javascripts')%>
 </html>
