@@ -6,14 +6,6 @@ var newartist = require('./routes/newartists');
 var search = require('./routes/search');
 var aindex = require('./routes/artistindex');
 
-require('./lib/mongodb');
-app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended: true}));
-app.use('/', index);
-app.use('/newartists', newartist);
-app.use('/search', search);
-app.use('/aindex', aindex);
-
 app.post('/artist/create', function (req, res){
   var collection = global.db.collection('musicinfo');
   collection.save(req.body, function () {
@@ -21,7 +13,15 @@ app.post('/artist/create', function (req, res){
   });
 })
 
+require('./lib/mongodb');
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/', index);
+app.use('/newartists', newartist);
+app.use('/search', search);
+app.use('/aindex', aindex);
 app.use(express.static('public'));
+app.use(express.static('www'));
 
 var port = process.env.PORT || 3000;
 
