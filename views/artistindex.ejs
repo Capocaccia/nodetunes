@@ -10,7 +10,9 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>ID</th>
+        <th>Genre</th>
+        <th>Wiki</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -18,13 +20,12 @@
         <tr>
           <td><%= music.name %></td>
           <td><%= music.genre %></td>
-          <td><%= music.wiki %></td>
-          <td><%= music._id %></td>
-        <tr>
-          <form action='/aindex/delete/<%=music._id %>' method="POST">
-            <input type='submit' value="Delete">
-          </form>
-        </tr>
+          <td><a href=<%= music.wiki %>>Wikipedia</td>
+          <td>
+            <form action='/aindex/delete/<%=music._id %>' method="POST">
+              <input type='submit' value="Delete">
+            </form>
+          </td>
        </tr>
       <% }); %>
     </tbody>
