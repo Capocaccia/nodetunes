@@ -8,7 +8,9 @@ router.get('/', function (req, res) {
     var formattedMusic = data.map(function (music) {
       return {
         _id: music._id,
-        name: music.name
+        name: music.name,
+        genre: music.genre,
+        wiki: music.wiki
       };
     });
     res.render('artistindex', {music: formattedMusic});
