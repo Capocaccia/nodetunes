@@ -6,14 +6,15 @@ router.get('/', function (req, res) {
   res.render('search')
 })
 
-router.get('/results', function (req, res) {
-  var params = req._parsedUrl.query.split('=')
-  var key = "'" + params[0] + "'"
-  var value = "'" + params[1] + "'"
+router.get('/results', function(req, res) {
   var collection = global.db.collection('musicinfo');
-  collection.find({key: value}, function(err, res){
-  })
-res.redirect('/search')
-})
+  var artistName = new RegExp(req.query.name,"i");
+  collection.find({name: artistName}, function(err, cursor) {
+    cursor.toArray(function(err, artists) {
+      res.send(artists);
+    })
+    //res.render('templates/artists');
+  });
+});
 
 module.exports = router;
