@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<%- include('../head')%>
+<body>
+  <h1>Login</h1>
+  <form action="/user/login" method="POST">
+    <label for="email">Email</label>
+    <input type='email' name='email'>
+    <label for="password">Password</label>
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+  </form>
+</body>
+<%- include('../javascripts')%>
+</html>

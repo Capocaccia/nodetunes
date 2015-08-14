@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- include('../head')%>
+<body>
+  <h1>Sign Up Form</h1>
+  <form action="/user" method="POST">
+    <label for="email">Email</label>
+    <input type='email' name='email'>
+    <label for="password">Password</label>
+    <input type="password" name="password">
+    <label for="password">Password Confirmation</label>
+    <input type="password" name="password_confirm">
+    <input type="submit" value="register">
+  </form>
+</body>
+<%- include('../javascripts')%>
+</html>
